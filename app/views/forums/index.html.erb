@@ -1,0 +1,11 @@
+<h1>Welcome to Feddit!</h1>
+
+<% @forums.each do |forum| %>
+  <%= link_to forum.subfeddit, forum_path(forum) %>
+  <br>
+  <%= link_to 'Delete Forum', forum, method: :delete %>
+  <br>
+<% end %>
+
+<%= link_to "Make new forum", new_forum_path %>
+

@@ -1,0 +1,6 @@
+<%= form_for :forum, method: 'post', url: {action: 'create'} do |f| %>
+  <%= label(:forum, :subfeddit) %>
+  <%= f.text_field :subfeddit %>
+
+  <%= f.submit "Create" %>
+<% end %>
