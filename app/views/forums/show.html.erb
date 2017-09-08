@@ -1,1 +1,12 @@
 <h1>Sauced</h1>
+
+<% @posts.each do |post| %>
+  <%= link_to post.title, forum_post_path(post) %>
+  <br>
+  <%= link_to 'Delete Post', forum_post_path(post), method: :delete %>
+  <br>
+<% end %>
+
+<%= @forum.id %>
+
+<%= link_to "Make new post", new_forum_post_path(@forum[:id], @post) %>

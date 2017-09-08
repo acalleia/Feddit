@@ -6,6 +6,7 @@ class ForumsController < ApplicationController
 
   def show
     @posts = Post.where(forum_id: params[:id])
+    @forum = Forum.find(params[:id])
   end
 
   def create
