@@ -1,1 +1,11 @@
-<h1>poop</h1>
+<h1><%= @posts.title %></h1>
+
+<p><%= @posts.body %></p>
+
+<% @comments.each do |comment| %>
+  <%= link_to comment.body, forum_post_comment_path(post) %>
+  <br>
+  <%= link_to 'Delete Post', forum_post_path(post), method: :delete %>
+  <br>
+  <br>
+<% end %>
