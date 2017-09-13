@@ -13,3 +13,95 @@
  *= require_tree .
  *= require_self
  */
+
+ .head{
+   position: relative;
+   color: white;
+   text-align: center;
+   background-color: darkturquoise;
+   padding: 15px;
+   top: 0%;
+   right: 0;
+ }
+
+ .headlong{
+   position: absolute;
+   color: white;
+   text-align: center;
+   background-color: darkturquoise;
+   padding: 15px;
+   top: 0;
+   right: 0;
+   left: 0;
+   height: 12vh;
+   padding-bottom: 0;
+   margin-top: 0;
+ }
+
+ .cont{
+   position: relative;
+ }
+
+ .btn-modify{
+   text-decoration: none;
+   color: grey;
+ }
+
+ .btn-modify:hover{
+   color: red;
+ }
+
+ .partition{
+   border: 2px solid lightgrey;
+   border-radius: 4px;
+   padding: 5px;
+   display: flex;
+   flex-direction: column;
+   padding-left: 1%;
+ }
+
+  .partition-head{
+   border: 2px solid lightgrey;
+   border-radius: 4px;
+   padding: 5px;
+   margin-top: 125px;
+   display: flex;
+   flex-direction: column;
+   padding-left: 1%;
+ }
+
+ .partition-body{
+   border-radius: 4px;
+   padding: 5px;
+   margin-top: 125px;
+   display: flex;
+   flex-direction: column;
+   padding-left: 1%;
+ }
+
+ .edit-btns{
+   display: flex;
+   justify-content: flex-end;
+ }
+
+ .edit-btns a{
+   padding-top: 1%;
+   margin-right: 2%;
+   text-decoration: none;
+   color: grey
+  }
+
+  .edit-btns a:hover{
+    color: red;
+  }
+
+  .title{
+    margin-top: 20%;
+  }
+
+  .form{
+    text-align: center;
+    color: darkturquoise;
+    margin-top: 125px;
+    font-size: 20px;
+  }
