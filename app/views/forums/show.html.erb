@@ -1,11 +1,14 @@
+<h1 class="headlong">f/ <%= @forum.subfeddit %></h1>
+<br>
+<div class="partition-body">
 <% @posts.each do |post| %>
-  <%= link_to post.title, forum_post_path(@forum[:id], post[:id] ) %>
-  <br>
-  <%= link_to 'Delete Post', forum_post_path(post), method: :delete %>
-  <br>
-  <br>
+  <h3><%= link_to post.title, forum_post_path(@forum[:id], post[:id] ) %></h3>
+  <%= link_to 'Delete Post', forum_post_path(post), method: :delete, class: "btn btn-modify" %>
 <% end %>
-
-<%= @forum.id %>
-
-<%= link_to "Make new post", new_forum_post_path(@forum[:id], @post) %>
+<br>
+<br>
+<a><%= link_to "Make new post", new_forum_post_path(@forum[:id], @post), class: "btn btn-modify" %></a>
+<br>
+<br>
+<a><%= link_to "Home", forums_path %>
+</div>

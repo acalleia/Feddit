@@ -1,11 +1,11 @@
-<h1>Welcome to Feddit!</h1>
+<h1 class= "headlong">Welcome to Feddit!</h1>
 
+<div class="partition-body">
 <% @forums.each do |forum| %>
-  <%= link_to forum.subfeddit, forum_path(forum) %>
-  <br>
-  <%= link_to 'Delete Forum', forum, method: :delete %>
+  <h2><%= link_to forum.subfeddit, forum_path(forum) %></h2>
+  <%= link_to 'Delete Forum', forum, method: :delete, class: "btn btn-modify" %>
   <br>
 <% end %>
 
 <%= link_to "Make new forum", new_forum_path %>
-
+</div>

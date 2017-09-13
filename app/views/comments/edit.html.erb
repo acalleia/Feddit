@@ -1,0 +1,5 @@
+  <%= form_for :comment, method: 'patch', url: {action: 'update'} do |f| %>
+    <%= label(:comment, :body) %>
+    <%= f.text_field :body %><br>
+    <%= f.submit "Save Edits" %>
+  <% end %>

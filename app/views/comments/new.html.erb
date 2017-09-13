@@ -1,0 +1,10 @@
+<h2 class="headlong">New Comment</h2>
+<div class="form">
+<%= form_for :comment, method: 'post', url: {action: 'create'} do |f| %>
+  <%= label(:comment, :body) %>
+  <%= f.text_field :body %>
+  <br>  
+
+  <%= f.submit "Create" %>
+<% end %>
+</div>

@@ -1,3 +1,5 @@
+<h2 class="headlong">New Post</h2>
+<div class="form">
 <%= form_for :post, method: 'post', url: {action: 'create'} do |f| %>
   <%= label(:post, :title) %>
   <%= f.text_field :title %>
@@ -8,3 +10,4 @@
 
   <%= f.submit "Create" %>
 <% end %>
+</div>

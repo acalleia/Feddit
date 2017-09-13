@@ -1,11 +1,30 @@
-<h1><%= @posts.title %></h1>
+<h2 class="headlong"><%= @posts.title %></h2>
 
-<p><%= @posts.body %></p>
+<div class="partition-head">
+  <div class="body"><%= @posts.body %></div>
+<br> 
+  <div class="edit-btns">
+    <a><%= link_to 'Edit', edit_forum_post_path(@forum[:id], @posts[:id]), class: "btn btn-modify" %></a> 
+  </div>
+</div>
+<br>
+<br>
+
 
 <% @comments.each do |comment| %>
-  <%= link_to comment.body, forum_post_comment_path(post) %>
+  <div class="partition">
+    <div class="body" ><%= comment.body %></div>
   <br>
-  <%= link_to 'Delete Post', forum_post_path(post), method: :delete %>
+    <div class="edit-btns">
+      <a><%= link_to 'Edit', edit_forum_post_comment_path(@forum[:id], @posts[:id], comment), class: "btn btn-modify-r" %></a> 
+      <%= link_to 'Delete Post', forum_post_comment_path(@forum[:id], @posts[:id], comment), method: :delete, class: "btn btn-modify-r" %>
+    </div>
+  </div>
   <br>
   <br>
 <% end %>
+
+<%= link_to "Comment", new_forum_post_comment_path(@forum[:id], @posts[:id], @comment) %>
+<br>
+<br>
+<%= link_to "Back to Forum", forum_path(@forum)%>
